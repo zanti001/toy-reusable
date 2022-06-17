@@ -16,8 +16,7 @@ env:
   TEMPLATE_SPEC_FILE_PATH: template-specs/linux-app-service/main.bicep
 
 jobs:
-  jobs:
-    lint:
+  lint:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v2
@@ -43,5 +42,4 @@ jobs:
               --version ${{ github.run_number }} \
               --template-file ${{ env.TEMPLATE_SPEC_FILE_PATH }} \
               --location ${{ env.AZURE_REGION }} \
-              --yes
-              
+              --yes  
